@@ -1,5 +1,7 @@
 ### METAR Retrieval Script        ###
 ### 10/23/2023 rosseloh           ###
+### probably only works on Win    ###
+### because .Net, idk             ###
 
 # 7.1 is required for "-UFormat" in Get-Date to provide UTC output
 #Requires -Version 7.1
