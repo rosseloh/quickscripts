@@ -3,7 +3,7 @@
 ### probably only works on Win    ###
 ### because .Net, idk             ###
 
-# 7.1 is required for "-UFormat" in Get-Date to provide UTC output
+# 7.1 is required for "-AsUTC" in Get-Date
 #Requires -Version 7.1
 
 # Initialize the session
