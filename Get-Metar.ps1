@@ -84,7 +84,6 @@ do {
 	$dAtis = Get-DAtis ( $icao )
 		if ( $dAtis ) {
 			Write-Host -NoNewLine -ForeGroundColor DarkRed "D-ATIS"
-			$i = 0
 			foreach ( $line in $dAtis ) {
 				Write-Host -NoNewLine `t
 				Write-Host $line
