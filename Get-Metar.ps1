@@ -4,7 +4,7 @@
 ### 
 ### rev 10/24/23 added D-ATIS lookup
 
-# 7.1 is required for "-UFormat" in Get-Date to provide UTC output
+# 7.1 is required for "-AsUtc" in Get-Date to provide UTC output
 #Requires -Version 7.1
 
 # Initialize the session
