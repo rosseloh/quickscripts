@@ -40,6 +40,7 @@ function Get-METARText ( $icao ) {
 }
 
 function Get-DAtis ( $icao ) {
+	$sAtis = $null
 	$atis = (Invoke-WebRequest -URI http://datis.clowd.io/api/$icao | ConvertFrom-Json).datis
 	if ( $atis ) { $sAtis = $atis.Split(". ") }
 	return $sAtis
