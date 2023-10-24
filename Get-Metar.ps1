@@ -58,8 +58,6 @@ do {
 	$latest = Get-METARText ($icao)
 	Clear-Host
 	
-	Write-Host
-	Write-Host		
 	Write-Host -ForegroundColor DarkRed -NoNewLine "Results as of "
 	Write-Host -ForegroundColor DarkRed -NoNewLine $latest[1]
 	Write-Host -ForegroundColor DarkRed "z:"
@@ -84,13 +82,12 @@ do {
 	
 	$dAtis = Get-DAtis ( $icao )
 		if ( $dAtis ) {
-		Write-Host -NoNewLine -ForeGroundColor DarkRed "D-ATIS"
-		$i = 0
-		foreach ( $line in $dAtis ) {
-			Write-Host -NoNewLine `t
-			Write-Host $line
-		}
-		Write-Host
+			Write-Host -NoNewLine -ForeGroundColor DarkRed "D-ATIS"
+			$i = 0
+			foreach ( $line in $dAtis ) {
+				Write-Host -NoNewLine `t
+				Write-Host $line
+			}
 	}
 	$result = $host.ui.PromptForChoice($title, $message, $options, 0)
 	switch ( $result ) {
