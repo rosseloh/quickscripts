@@ -30,9 +30,9 @@ $message = "What next?"
 
 function Get-METARText ( $icao ) {
 	$metar = (Invoke-WebRequest -URI https://aviationweather.gov/cgi-bin/data/metar.php?ids=$icao).Content
-	if ( $metar -eq "" ) { $metar = "Invalid ICAO Code" }
+	if ( $metar -eq "" ) { $metar = "No METAR found, check your airport code" }
 	$taf = (Invoke-WebRequest -URI https://aviationweather.gov/cgi-bin/data/taf.php?ids=$icao).Content -replace "(?m)^\s+"
-	if ( $taf -eq "" ) { $taf = "Invalid ICAO Code" }
+	if ( $taf -eq "" ) { $taf = "No TAF found - check your airport code" }
 	[array]$tafSplit = $taf.Split("`n")
 	$date = $date = Get-Date -UFormat "%m/%d %R" -AsUTC # local system date and time in zulu
 	$dateAndTime = ($metar -split " ")[1]  # date and time as pulled from the METAR in zulu, used to compare if a result is new or not
@@ -51,7 +51,7 @@ do {
 	if ( $new -eq 1 ) {
 		Clear-Host
 		do {
-			$icao = (Read-Host -Prompt "Enter a valid ICAO code").ToUpper() 
+			$icao = (Read-Host -Prompt "Enter a valid airport code").ToUpper() 
 		} while ( $icao -eq "" ) 
 	}
 	
