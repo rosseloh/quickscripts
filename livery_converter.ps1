@@ -11,6 +11,8 @@
 ### I'd also recommend renaming the script per-livery, if you plan to keep them
 ###  in a central location.
 
+
+## Set these variables to match your particular setup and livery!
 # Add your list of PNG files, with fully qualified paths (unless you run
 #  the script from the livery's objects folder). Any number can be added, comma-
 #  separated.
@@ -20,11 +22,7 @@ $fileList = @(
 	'"H:\flightsim\liveries\LES-dc3\Bonanza-N498\objects\Wing_Left.png"',
 	'"H:\flightsim\liveries\LES-dc3\Bonanza-N498\objects\Wing_Right.png"'
 )
-
-# XPTools path
 $xpToolsPath = 'H:\xPlane\xptools'
-
-# Output path
 $outputPath = 'G:\Flight Simulation\X-Plane 12\Aircraft\X-Aviation\Douglas DC-3 v2\liveries\Bonanza Air Lines - N498\objects\'
 
 
