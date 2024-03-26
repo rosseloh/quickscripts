@@ -35,7 +35,7 @@ $cmdStart = -join($xpToolsPath, '\tools\DDSTool.exe')
 foreach ($file in $fileList) {
 	$fileName = (Split-Path $file -Leaf).Split('.')[0]
 	$outputFile = -join('"', $outputPath, $fileName, '.dds"')
-	$params = '--png2dxt1 --std_mips --gamma_22 --scale_none', $file, $outputFile
+	$params = '--png2dxt --std_mips --gamma_22 --scale_none', $file, $outputFile
 	
 	$cmd = "& `"$cmdStart`" $params"
 	Write-Host Executing $cmd
