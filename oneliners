@@ -5,7 +5,11 @@
 # Convert AD domain username to SID or vice-versa
 # Probably requires AD powershell modules
 # Input: domain+username, Output: SID
+```powershell
 ((New-Object System.Security.Principal.NTAccount("domain.tld","username")).Translate([System.Security.Principal.SecurityIdentifier])).Value
+```
 # Input: SID, Output: domain\username
+```powershell
 ((New-Object System.Security.Principal.SecurityIdentifier("SID")).Translate([System.Security.Principal.NTAccount])).Value
+```
 
