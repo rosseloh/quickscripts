@@ -1,0 +1,16 @@
+One (or nearly one) liner scripts for Powershell, Bash, Python, or similar. Commented to describe what they do and where they might be useful.
+
+# PowerShell
+
+## Convert AD domain username to SID or vice-versa
+Probably requires AD powershell modules
+### Input: domain+username, Output: SID
+```powershell
+((New-Object System.Security.Principal.NTAccount("domain.tld","username")).Translate([System.Security.Principal.SecurityIdentifier])).Value
+```
+
+### Input: SID, Output: domain\username
+```powershell
+((New-Object System.Security.Principal.SecurityIdentifier("SID")).Translate([System.Security.Principal.NTAccount])).Value
+```
+
