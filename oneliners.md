@@ -1,4 +1,4 @@
-One (or nearly one) liner scripts for Powershell, Bash, Python, or similar. Commented to describe what they do and where they might be useful.
+One (or nearly one) liner scripts for Powershell, Bash, Python, or similar.
 
 # PowerShell
 
